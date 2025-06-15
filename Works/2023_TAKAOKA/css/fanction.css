@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: auto;
+  width: 1000px;  
+}
+
+h1 {  
+  color: #224636;
+  letter-spacing: 0.1em;
+  font-size: 45px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-bottom: dashed 2px #4c826b;
+}
+
+.yeah{
+  font-size: 20px;
+  width: 900px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 35px 0px;
+}
+.c {
+  color: #4c826b;
+  font-size: 30px;
+  background: linear-gradient(transparent 60%, #faf4da 30%);
+  display: inline-block;
+  margin: 10px 0;
+}
+.b {
+  color: #4c826b;
+  font-size: 30px;
+  background: linear-gradient(transparent 60%, #ffffff 30%);
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.year{
+  font-size: 17px;
+  letter-spacing: 0.08em;
+}
+
+.img-right {
+  float: right;
+  margin: 10px;
+  
+  width:300px;
+}
+
+/*head-border*/
+.head-border {
+  display: flex;
+  align-items: center;
+}
+.head-border:before,
+.head-border:after {
+  content: "";
+  height: 2px;
+  flex-grow: 1;
+  background-color: #303030;
+}
+.head-border:before {
+  margin-right: 1rem;
+}
+.head-border:after {
+  margin-left: 1rem;
+}

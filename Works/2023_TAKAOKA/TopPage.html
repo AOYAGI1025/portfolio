@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>高岡市周辺紹介ページ (2023) | Portfolio</title>
+    <meta charset="UTF-8">
+    <!-- cssはここに -->
+    <link rel="stylesheet" text="text/css" href="css/fanction.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" text="text/css" href="css/07_accordionpanel.css">
+    <link rel='stylesheet' type="text/css" href='css/07_tabpanel.css'>
+    <link rel="stylesheet" type="text/css" href="css/08_slick.css">
+    <link rel="stylesheet" text="text/css" href="css/10_drawer.css">
+    <!-- jsはここに -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/fanction.js"></script>
+    <script src="slick/slick.js"></script>
+    <script src="js/08_slick.js"></script>
+    <script src="js/10_drawer.js"></script>
+    <script src="js/10_iscroll.js"></script>
+    <script type='text/javascript'>
+        $(function () {
+            $('dd:not(:first)').css('display', 'none');
+            $('dl dt').click(function () {
+                if ($('+dd', this).css('display') == 'none') {
+                    $('dd').slideUp('slow');
+                    $('+dd', this).slideDown('slow');
+                }
+            });
+        });
+		$(function () {
+			$('ul.panel li:not(' + $('ul.tab li a.selected').attr('href') + ')').hide();
+			$('ul.tab li a').click(function () {
+				$('ul.tab li a').removeClass('selected');
+				$(this).addClass('selected');
+				$('ul.panel li').hide();
+				$($(this).attr('href')).show();
+				return false;
+			});
+		});
+        $(function () {
+            $('.drawer').drawer();
+            $('.drawer-menu li').click(function () {
+                $('.drawer').drawer('close');
+            });
+        });
+    </script>
+</head>
+<body class="drawer drawer--right">
+<header role="banner">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+        <span class="sr-only">toggle navigation</span>
+        <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu">
+            <li><a class="drawer-brand" href="#">MENU</a></li>
+            <li><a class="drawer-menu-item" href="#">TOP</a></li>
+            <li><a class="drawer-menu-item" href="#link_spot">SPOT</a></li>
+            <li><a class="drawer-menu-item" href="#link_food">FOOD</a></li>
+        </ul>
+    </nav>
+</header>
+<main role="main">
+
+    <h1>富山県 高岡市周辺</h1>
+
+    <section class="slider">
+        <div align="center"><img src="picture/sight1.jpg"><p class="caption"></p></div>
+        <div align="center"><img src="picture/sight2.jpg"><p class="caption"></p></div>
+        <div align="center"><img src="picture/sight3.jpg"><p class="caption"></p></div>
+        <div align="center"><img src="picture/sight4.jpg"><p class="caption"></p></div>
+    </section>
+
+    <p class="yeah">今回紹介する富山県高岡市周辺は、今年一人旅で向かった場所です。<br><br>
+        特にこれと言った有名な観光地はありませんが、<br>とても楽しめたので実際に見た感想を交えつつ紹介させて頂きます。
+    </p>
+
+    <div id="container">
+        <h2 class="head-border" id="link_spot">SPOT</h2>
+        <ul class="tab">
+            <li><a href="#tab1" class="selected">高岡大仏</a></li>
+            <li><a href="#tab2">雨晴海岸</a></li>
+            <li><a href="#tab3">高岡山瑞龍寺</a></li>
+        </ul>
+        <ul class="panel">
+            <li id="tab1">
+                <div>
+                    <img src="picture/sight1.jpg" class="img-right">
+                    <h3 class="c">高岡大仏　</h3>
+                    <p class="year">
+                        高岡市の大佛寺にある青銅製阿弥陀如来坐像「高岡大仏」。高さ：16m<br><br>
+                        高岡大仏が鎮座する台座の内部は回廊になっており、壁面には地獄絵などの仏画13作や、1900年の大火で類焼した2代目高岡大仏の焼け残りとされるご尊顔が安置されており、参拝とともに心落ち着く時間を体験することができます。<br>
+                        <br>感想：思ってたより町中にポツンといる感じ。近くにある茶屋の店員さんが良い人過ぎて最高でした。
+                    </p>
+                </div>
+            </li>
+            <li id="tab2">
+                <div>
+                    <img src="picture/sight2.jpg" class="img-right">
+                    <h3 class="c">国定公園 雨晴海岸　</h3>
+                    <p class="year">
+                        海越しの女岩と立山連峰はまさに絶景スポット。海を挟み標高3,000m級の山々を望むことが出来る景色は、世界でもなかなか見ることができない絶景です。<br><br>
+                        「日本の渚百選」、「白砂青松百選」、「日本の海水浴場88選」にも選ばれるなど、素晴らしい風景とともに夏場は遠浅で絶好の海水浴場にもなる人気の海岸。<br>
+                        <br>感想：あまり綺麗には見えなかった。猛暑なのもあって気分下がってました。
+                    </p>
+                </div>
+            </li>
+            <li id="tab3">
+                <div>
+                    <img src="picture/sight4.jpg" class="img-right">
+                    <h3 class="c">国宝 高岡山瑞龍寺　</h3>
+                    <p class="year">
+                        荘厳かつ美しい佇まいの瑞龍寺は、高岡の開祖、加賀前田家2代当主前田利長の菩提寺です。前田利長公の菩提を弔うために3代当主前田利常により建立された、壮大な伽藍配置様式の豪壮にして典雅な美しさに圧倒される、加賀藩百二十万石の財力を如実に示す建造物です。<br>
+                        鉛板葺きの仏殿屋根や檜と戸室石をふんだんに使った堂内、仏殿を囲むように左右対称に造られた回廊、美しい天井画など、見どころも満載。<br>
+                        <br>感想：静かで厳かな雰囲気を感じれてとてもいい場所だった。見応えありすぎた。
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <h2 class="head-border" id="link_food">FOOD</h2>
+    <dl>
+        <dt class="header">富山ブラック</dt>
+        <dd>
+            <div>
+                <img src="picture/food1.jpg" class="img-right">
+                <h3 class="b" style="color: black;">富山ブラック </h3>
+                <p class="year">
+                    富山ブラックとは、昭和30年ころに富山県富山市で誕生したご当地ラーメン<br>
+                    汗をかく肉体労働者のために塩分補給として、味の濃いスープの醤油ラーメンを作ったのがはじまりで、ごはんと一緒に食べることも意識され、塩辛いスープになったといわれる。<br>
+                    <br>感想：しょっぱい。自分は好きな味だったけど、今まで食べたラーメンの中で一番体に悪い気がした。<br>
+                </p>
+            </div>
+        </dd>
+        <dt class="header">ます寿司</dt>
+        <dd>
+            <div>
+                <img src="picture/food2.jpg" class="img-right">
+                <h3 class="b">ます寿司　</h3>
+                <p class="year">
+                    塩漬けされた美しいますの切り身と上質な米を使い、1つずつ丁寧に作られているます寿司。江戸時代に、富山藩士の吉村新八が3代目藩主である前田利興へ献上したのが起源であるといわれています。<br>
+                    富山県の郷土料理として知られ、店ごとにさまざまな味が楽しめて、駅弁としても人気があります。富山市内だけでも10を超える店舗でます寿司が販売されており、どの店でも熟練した職人達によって丁寧に作り上げられた逸品を味わえます。店によって味が異なるため、食べ比べてみるのもおすすめです。<br>
+                    <br>感想：酢がしつこ過ぎずでとても好きな味だった。また食べたい。
+                </p>
+            </div>
+        </dd>
+        <dt class="header">ホタルイカ</dt>
+        <dd>
+            <div>
+                <img src="picture/hotaru.jpg" class="img-right">
+                <h3 class="b">ホタルイカ　</h3>
+                <p class="year">
+                    春になるとともに旬を迎えるホタルイカは、プリプリ・コリコリとした食感が特徴。富山湾ではホタルイカの漁獲が盛んであるため、富山名物として知られています。<br>
+                    富山湾のホタルイカは定置網で漁獲されるため、傷がつきにくく新鮮です。刺身の他、沖漬けや黒づくり、ボイルなどで楽しめます。<br>
+                    <br>これは食べてないので感想ないです。食べたかった。
+                </p>
+            </div>
+        </dd>
+    </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.slider{
+	margin: 70px auto;
+	width: 1000px;
+}
+.slider img{
+	height: 500px;
+	width: auto;
+}
+.slick-prev:before,
+.slick-next:before {
+	color: #000;
+}
+.slick-arrow:before{
+	content:""!important;
+}

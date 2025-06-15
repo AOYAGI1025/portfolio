@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>超スライドパズル (2023) | Portfolio</title>
+	<meta charset="utf-8">
+	<style>
+		#board {
+			border-collapse:collapse;
+		}
+		td {
+			width:50px;
+			height:50px;
+			font-size:24pt;
+			text-align:center;
+			border:solid;
+		}
+		td.bg {
+			background-color:#c0ffc0;
+		}
+		td.br {
+			background-color:#ffc0c0;
+		}
+		td.bb {
+			background-color:#c0c0ff;
+		}
+		.bg:hover {
+			background-color:#c0c0c0;
+		}
+	</style>
+	<script>
+		//初期表作成
+		window.onload =function() {
+			for(let i=0 ; i<10 ; i++) {//③-01
+				let tr = document.createElement('tr');//③-02
+				for (let j=0 ; j<10 ; j++) {//③-03
+					let td = document.createElement('td');//③-04
+					tr.appendChild(td);//③-05
+				}//③-03
+                document.getElementById('board').appendChild(tr);//③-06
+			}//③-01
+			reset();//③-07
+		}
+		//初期設定
+		function init() {
+			let cells = document.getElementsByTagName('td');//④-01
+			for (i = 0; i < cells.length; i++) {//④-02
+				cells[i].innerHTML = i === (cells.length - 1) ? '' : (i + 1);//④-03
+				cells[i].setAttribute('onclick','clicked('+i+')')//④-04
+			}//④-02
+			for (let r=0; r<50000; r++) {//④-05
+				clicked(Math.floor(Math.random() * cells.length))//④-06
+			}//④-05
+		}
+		// クリック処理
+		function clicked(e) {
+			let cells = document.getElementsByTagName('td');//⑤-01
+			if (e - 10 >= 0 && cells[e - 10].innerHTML === '') {//if(⑤-02){
+				swap(e, e - 10)//⑤-03
+
+			} else if (e + 10 < 100 && cells[e + 10].innerHTML === '') {//} else if (⑤-04){
+				swap(e, e + 10)//⑤-05
+
+			} else if (e % 10 !== 0 && cells[e - 1].innerHTML === '') {//} else if (⑤-06){
+				swap(e, e - 1)//⑤-07
+
+			} else if (e % 10 !== 9 && cells[e + 1].innerHTML === '') {//} else if (⑤-08){
+				swap(e, e+1)//⑤-09
+			}//}
+			}
+		// 置き換え処理
+		function swap(a, b) {
+			let cells = document.getElementsByTagName('td');//⑥-01
+			[cells[a].innerHTML, cells[b].innerHTML] = [cells[b].innerHTML, cells[a].innerHTML];//⑥-02
+			check();//⑥-03
+		}
+		// 完成チェック処理
+		//bg = midori , bg = aka , br= ao , hai
+		function check() {
+			let cells = document.getElementsByTagName('td');//⑦-01
+			let countok = 0;//⑦-02
+			for (i = 0; i < Math.floor(cells.length); i++) {//⑦-03
+				if (cells[i].innerHTML == i+1) {//if(⑦-04){
+					cells[i].className = 'bb';//⑦-05
+					countok++;//⑦-06
+				} else if (cells[i].innerHTML === '') {//} else if(⑦-04){
+					cells[i].className = 'bg';//⑦-08
+				} else {//} else {
+					cells[i].className = 'br';//⑦-09
+				}//}
+			}//⑦-03
+			if (countok === 8) {//if(⑦-10){
+				document.getElementById('complete').innerHTML = '完成！';//⑦-11
+				document.getElementById('reset').innerHTML = 'もう一回！';//⑦-12
+			} else {//} else {
+				document.getElementById('complete').innerHTML = 'あと' + (99 - countok) + '個！';//⑦-13
+			}//}
+		}
+		//リセット処理
+		function reset() {
+			init();//③-08
+			document.getElementById('reset').innerHTML = 'リセット…'; //③-09
+		}
+	</script>
+</head>
+<body>
+	<h2>スライドパズル</h2>
+	<button id="reset" onclick="reset()">リセット…</button>
+	<table id="board"></table>
+	<h2 id="complete"></h2>
+</body>
+</html>
