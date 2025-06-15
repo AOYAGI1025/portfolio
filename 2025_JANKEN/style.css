@@ -1,0 +1,57 @@
+:root {
+  --primary: #1e90ff;
+  --bg: #000;
+  --card-bg: #111;
+  --text: #1e90ff;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  display:flex; align-items:center; justify-content:center;
+  height:100vh; background:var(--bg); color:var(--text);
+  font-family: 'Press Start 2P', cursive;
+}
+.card {
+  background:var(--card-bg);
+  padding:3rem; border:4px solid var(--primary);
+  text-align:center; width:60vw; max-width:600px;
+}
+h1 {
+  font-size:2rem; margin-bottom:1rem;
+  color:var(--primary);
+}
+.countdown {
+  font-size:2rem; margin:1rem 0;
+  height:2.5rem;
+}
+.cpu-display {
+  width:120px; height:120px;
+  margin:1.5rem auto;
+}
+#cpu-hand {
+  width:100%; height:100%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:6rem; color:var(--primary);
+}
+.choices {
+  display:flex; justify-content:space-around; gap:2rem;
+  margin:2rem 0;
+}
+.choices button {
+  width:120px; height:120px; border:none;
+  border-radius:50%; background:var(--card-bg);
+  color:var(--primary); font-size:3rem; cursor:pointer;
+  box-shadow:0 0 8px var(--primary);
+  transition:transform 0.1s;
+}
+.choices button:active {
+  transform: scale(0.9);
+}
+.result {
+  margin-top:1.5rem; font-size:1rem;
+  line-height:1.5rem;
+  color:var(--text);
+  min-height:6rem;
+}
+.result div {
+  white-space: nowrap;
+}
