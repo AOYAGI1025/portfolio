@@ -7,78 +7,161 @@
     <!-- Bootstrap CSS 便利らしいけど使い方わからんから後回しやで！！
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     -->
-    <title>----- | Portfolio</title>
+    <title>AOYAGI | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function openVideo(url) {
+        document.getElementById('videoFrame').src = url;
+        document.getElementById('videoModal').style.display = 'flex';
+        }
+        function closeVideo() {
+        document.getElementById('videoFrame').src = '';
+        document.getElementById('videoModal').style.display = 'none';
+        }
+    </script>
 </head>
 <body>
     <header class="header">
         <div class="header-div">
-        <h1>Portfolio</h1>
+        <h1><a href="#top">Portfolio</a></h1>
         <nav class="header-nav">
                 <a href="#profile">Profile</a>
                 <a href="#skills">Skills</a>
                 <a href="#works">Works</a>
-                <a href="#contact">Contact</a>
         </nav>
         </div>
     </header>
     <main class="container">
-        <section class="name">
+        <section id="top" class="name">
             <h1>青栁 司　Tsukasa Aoyagi</h1>
             <p>情報科学専門学校　情報セキュリティ学科　3年</p>
         </section>  
         <section class="profile" id="profile">
             <h2>Profile</h2>
-            <h3>趣味</h3>
-            <ul class="interest-list">
-                <li>フロントエンド開発</li>
-                <li>UI/UXデザイン</li>
-                <li>インタラクティブアート・メディア表現</li>
-                <li>音楽とビジュアルを連動させた演出</li>
-                <li>チーム制作とコラボレーション</li>
-            </ul>
             <p>趣味：イラスト制作、映画鑑賞、ゲーム</p>
-            <p>自己紹介: 情報セキュリティに興味を持ち、日々学びながらスキルを磨いています。将来はセキュリティエンジニアとして活躍したいと考えています。</p>
-            <p>目標: 情報セキュリティの専門家として、企業や個人のデータを守るために貢献すること。</p>
+            <p>興味分野：フロントエンド開発、UI/UXデザイン、メディア表現、楽しそうなもの</p>
+            <p>自己紹介：プログラミングが好きで、初級レベルながら日々楽しく学んでいます</p>
+            <p>将来の目標：人を楽しませたり喜ばせたりできるようなサービスをつくりたいです</p>
         </section>
         <section class="cards">
             <div class="card">
                 <h2>ゼミ活動について</h2>
-                <p>IoTゼミに所属し、IoT技術を活用した謎解きイベントの開発に取り組んでいます。気になったIoT機器に積極的に挑戦し、より面白いものができるようにと試行錯誤をしています。また、実践的な技術の習得と問題解決能力の向上を目指しています。</p>
+                <p>IoTゼミに所属し、IoT技術を活用した謎解きイベントの開発に取り組んでいます。<br>気になったIoT機器には積極的に触れ、より魅力的な体験を創れるよう試行錯誤を重ねています。実践的な技術の習得に加え、課題に対する柔軟な発想や問題解決力の向上を目指して取り組んでいます。</p>
             </div>
             <div class="card">
                 <h2>学⽣⽣活で⼒を注いだこと</h2>
-                <p>基本情報技術者試験の勉強を通じて基礎知識の定着に力を入れ、土台を着実に築いて来ました。定礎。また個人的にイラスト製作にも力を入れており、デザインや構図、配色などを考える経験はUIや表現に対する間隔にも繋がっていると感じています。</p>
+                <p>基本情報技術者試験の勉強を通して、ITに関する基礎知識を着実に身につけました。<br>また、個人的にイラスト制作にも取り組んでおり、デザインや構図、配色を考える過程は、UIや視覚的な表現に対する感覚の向上にもつながっていると感じています。</p>
             </div>
         </section>
         <section class="skills" id="skills">
             <h2>Skills</h2>
             <div class="skills-grid">
 
-            </div>
+                <div>
+                    <h3>プログラミング</h3>
+                    <p>PythonはAtCoderの教材を通じて学習しました。全体的にどの言語もまだ習得途中で、基本的な文法や使い方を理解している初級レベルです。</p>
+                    <table class="skills-table">
+                        <thead>
+                            <tr><th>TYPE</th><th>年数</th><th>概要</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Python</td><td>1年</td><td>AtCoderやIoT開発で活用中</td></tr>
+                            <tr><td>Java</td><td>1年</td><td>基本的な文法や構文を習得済み</td></tr>
+                            <tr><td>Kotlin</td><td>1年</td><td>授業での学習経験あり</td></tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <h3>Web技術</h3>
+                    <p>HTML、CSS、JavaScriptを使ったフロントエンド開発に取り組んでおり、現在はReactに挑戦しています。DBも苦手ながら少し触れています。</p>
+                    <table class="skills-table">
+                        <thead>
+                            <tr><th>TYPE</th><th>年数</th><th>概要</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>HTML/CSS</td><td>4年</td><td>基本的なWebページの作成が可能</td></tr>
+                            <tr><td>JavaScript</td><td>3年</td><td>簡単な動的処理に対応</td></tr>
+                            <tr><td>React</td><td>1年</td><td>基礎の部分を学習中</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
 
         </section>
+        <section class="certification-section">
+            <h3>資格</h3>
+            <p>ITの基礎知識を体系的に身につけるため、基本情報技術者試験の学習に取り組みました。</p>
+            <div class="certification-badge">2023年　基本情報技術者試験　合格</div>
+        </section>
+
         <section class="works" id="works">
             <h2>Works</h2>
-            <ul>
-                <li><a href="https://github.com/yourusername/project1">Project 1</a></li>
-                <li><a href="https://github.com/yourusername/project2">Project 2</a></li>
-                <li><a href="https://github.com/yourusername/project3">Project 3</a></li>
-            </ul>
 
-        </section>
-        <section class="contact" id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/yourusername">yourusername</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourusername/">yourusername</a></p>
-            <p>Twitter: <a href="https://twitter.com/yourusername">yourusername</a></p>
-            <p>Facebook: <a href="https://www.facebook.com/yourusername">yourusername</a></p>
+            <div class="project-item">
+                <img src="img/pr-portfolio.png" alt="Project Thumbnail" class="project-thumb">
+                <div class="project-info">
+                <h3 class="project-title">My Portfolio (2025)</h3>
+                <p class="project-tech">使用技術：HTML / CSS / JavaScript</p>
+                <p class="project-desc">インターン応募のために作ったポートフォリオページです。見やすさを意識してデザインしました。</p>
+                <a href="https://aoyagi1025.github.io/portfolio/" class="project-btn" target="_blank">ページを開く</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="img/pr-janken.png" alt="Project Thumbnail" class="project-thumb">
+                <div class="project-info">
+                <h3 class="project-title">JANKEN (2025)</h3>
+                <p class="project-tech">使用技術：HTML / CSS / JavaScript</p>
+                <p class="project-desc">勝率0%のじゃんけんを楽しめます。JSのスキルアップの為に作成しました。</p>
+                <a href="https://aoyagi1025.github.io/portfolio/Works/2025_JANKEN/" class="project-btn" target="_blank">ページを開く</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="img/pr-train.png" alt="Project Thumbnail" class="project-thumb">
+                <div class="project-info">
+                <h3 class="project-title">電車乗り過ごし防止アプリ (2024)</h3>
+                <p class="project-tech">使用技術：React / HTML / CSS / JavaScript</p>
+                <p class="project-desc">学校課題。Reactを触れる為に製作。現在地から駅までの距離を自動で計算して知らせるアプリです。GPSの情報だけで近づいたら音が鳴る仕組みを作りました。</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="img/pr-hana.png" alt="Project Thumbnail" class="project-thumb">
+                <div class="project-info">
+                <h3 class="project-title">花摘革命 (2024)</h3>
+                <p class="project-tech">使用技術：HTML / CSS / JavaScript / PHP / Obniz</p>
+                <p class="project-desc">学校課題。学内のトイレ争奪戦を解消する革命システムです。センサーでドアの開け閉めを読み取り、開閉状況をスマホで確認できます。</p>
+                <button class="project-video-btn" onclick="openVideo('https://www.youtube.com/embed/3g_N_9DJGkQ')">動画を見る</button>
+
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="img/pr-takaoka.png" alt="Project Thumbnail" class="project-thumb">
+                <div class="project-info">
+                <h3 class="project-title">高岡市周辺紹介ページ (2023)</h3>
+                <p class="project-tech">HTML / CSS / JavaScript（Slick）</p>
+                <p class="project-desc">学校課題。Slickを使ったWebページです。画像や文章がごちゃごちゃしないように心がけました。</p>
+                <a href="https://aoyagi1025.github.io/portfolio/Works/2023_TAKAOKA/TopPage.html" class="project-btn" target="_blank">ページを開く</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="img/pr-num.png" alt="Project Thumbnail" class="project-thumb">
+                <div class="project-info">
+                <h3 class="project-title">超スライドパズル (2023)</h3>
+                <p class="project-tech">HTML / CSS / JavaScript</p>
+                <p class="project-desc">学校課題。リセット機能完備の大きいスライドパズルです。完成させると嬉しいことにお祝いしてくれます。</p>
+                <a href="https://aoyagi1025.github.io/portfolio/Works/2023_SLIDE/" class="project-btn" target="_blank">ページを開く</a>
+                </div>
+            </div>
         </section>
 
         <section class="footer">
             <p>&copy; Tsukasa Aoyagi</p>
         </section>
     </main>
+    <div id="videoModal" class="video-modal" style="display:none;">
+        <button class="video-modal-close" onclick="closeVideo()">×</button>
+        <iframe id="videoFrame" src="" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
