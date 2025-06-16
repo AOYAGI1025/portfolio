@@ -111,11 +111,8 @@ html, body {
     gap: 2rem;
     margin-bottom: 4rem;
 }
-
-.card h1 {
-    text-align:center;
-}
 .card {
+    text-align:center;
     background: var(--card-bg);
     padding: 1rem 2rem;
     border-radius: 16px;
